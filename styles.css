@@ -1,0 +1,86 @@
+@font-face {
+font-family: "body";
+src: url("po/os/OpenSans-Regular.ttf") format('truetype');
+}
+@font-face {
+font-family: "header";
+src: url("po/pl/ProzaLibre-Bold.ttf") format('truetype');
+}
+.header{
+  font-family: 'header' !important;
+}
+.body{
+  font-family: 'body' !important;
+}
+.carousel .carousel-item {
+  transition-duration: 1.5s;
+}
+
+.red{
+  color:#fe5f55;
+}
+.lwhite{
+  color: #f7f7ff;
+}
+.lblue{
+  color: #bdd5ea
+}
+.blue{
+  color: #577399;
+}
+.ldark{
+  color: #495867;
+}
+
+
+.bg-red{
+  background-color:#fe5f55;
+}
+.bg-lwhite{
+  background-color: #f7f7ff;
+}
+.bg-lblue{
+  background-color: #bdd5ea
+}
+.bg-blue{
+  background-color: #577399;
+}
+.bg-ldark{
+  background-color: #495867;
+}
+
+.image3 {
+    width: 570px !important;
+    height: 100px;
+    margin: auto;
+}
+/* #recipeCarousel .carousel-item-right.active,
+#recipeCarousel .carousel-item-next {
+    transform: translateX(100px);
+}
+
+#recipeCarousel .carousel-item-left.active,
+#recipeCarousel .carousel-item-prev {
+   transform: translateX(-100px);
+} */
+
+/* #recipeCarousel .carousel-item-right.active,
+#recipeCarousel .carousel-item-next {
+   transform: translateX(33%);
+} */
+/* #recipeCarousel .carousel-item-left.active,
+#recipeCarousel .carousel-item-prev {
+  transform: translateX(-33%);
+} */
+
+
+#recipeCarousel .carousel-item.active,
+#recipeCarousel .carousel-item-next,
+#recipeCarousel .carousel-item-prev {
+  display: flex;
+}
+
+#recipeCarousel .carousel-item-right,
+#recipeCarousel .carousel-item-left {
+ transform: translateX(0);
+}
