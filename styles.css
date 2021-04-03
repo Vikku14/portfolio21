@@ -54,25 +54,6 @@ src: url("po/pl/ProzaLibre-Bold.ttf") format('truetype');
     height: 100px;
     margin: auto;
 }
-/* #recipeCarousel .carousel-item-right.active,
-#recipeCarousel .carousel-item-next {
-    transform: translateX(100px);
-}
-
-#recipeCarousel .carousel-item-left.active,
-#recipeCarousel .carousel-item-prev {
-   transform: translateX(-100px);
-} */
-
-/* #recipeCarousel .carousel-item-right.active,
-#recipeCarousel .carousel-item-next {
-   transform: translateX(33%);
-} */
-/* #recipeCarousel .carousel-item-left.active,
-#recipeCarousel .carousel-item-prev {
-  transform: translateX(-33%);
-} */
-
 
 #recipeCarousel .carousel-item.active,
 #recipeCarousel .carousel-item-next,
