@@ -54,14 +54,3 @@ src: url("po/pl/ProzaLibre-Bold.ttf") format('truetype');
     height: 100px;
     margin: auto;
 }
-
-#recipeCarousel .carousel-item.active,
-#recipeCarousel .carousel-item-next,
-#recipeCarousel .carousel-item-prev {
-  display: flex;
-}
-
-#recipeCarousel .carousel-item-right,
-#recipeCarousel .carousel-item-left {
- transform: translateX(0);
-}

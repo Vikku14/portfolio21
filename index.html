@@ -11,6 +11,10 @@
 
   <title>My portfolio</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
+ 
+<!-- Default Theme -->
+<link rel="stylesheet" href="owl-carousel/owl.theme.css">
 </head>
 
 <body>
@@ -31,12 +35,12 @@
         </div>
       </div>
       <div class="text-center">
-        <button type="button" name="button" class="btn bg-ldark lwhite btn-lg bpdy" title="Excited? Click Here">Explore More</button>
-        <button type="button" name="button" class="btn btn-lg body bg-lwhite ldark" title="Busy? Download CV">Download CV</button>
+        <a type="button" name="button" href="#explore" class="btn bg-ldark lwhite btn-lg bpdy" title="Excited? Click Here">Explore More</a>
+        <a type="button" download href="resume.pdf" target="_blank" name="button" class="btn btn-lg body bg-lwhite ldark" title="Busy? Download CV">Download CV</a>
       </div>
     </div>
     <!-- exprore more -->
-    <div class=" my-md-4">
+    <div class=" my-md-4" id="explore">
       <div class="container">
 
         <div class="row">
@@ -124,34 +128,32 @@
             </span>
           </div>
   <section class="container mt-2" id="languages">
-    <div id="recipeCarousel" class="carousel slide w-100 mt-5" data-bs-ride="carousel" data-bs-interval="1500">
-      <div class="carousel-inner" role="listbox">
-        <div class="carousel-item active">
-          <div class="card border-0">
-            <img class="img-fluid  p-3 image3" src="python.svg" alt="Python" title="Python">
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="card border-0">
-            <img class="img-fluid  px-5 image3" src="django.png" alt="Django" title="Django">
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="card border-0">
-            <img class="img-fluid p-0 image3" src="post.svg" alt="Postgres" title="Postgres">
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="card border-0">
-            <img class="img-fluid px-5 image3" src="boot.png" alt="Bootstrap" title="Bootstrap">
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="card border-0">
-            <img class="img-fluid px-5 py-1 image3" src="js.svg" alt="JavaScript" title="JavaScript">
-          </div>
-        </div>
+    <div id="owl-example" class="owl-carousel">
+      <div> 
+        <img class="img-fluid  p-3 image3" src="python.svg" alt="Python" title="Python">  
       </div>
+      <div>
+        <img class="img-fluid  px-5 image3" src="django.png" alt="Django" title="Django">
+        
+      </div>
+      <div>
+  
+        <img class="img-fluid p-0 image3" src="post.svg" alt="Postgres" title="Postgres">
+  
+      </div>
+      <div>
+        <img class="img-fluid px-5 py-1 image3" src="scrapy.png" alt="Scrapy" title="scrapy">
+  
+      </div>
+      <div>
+        <img class="img-fluid px-5 image3" src="boot.png" alt="Bootstrap" title="Bootstrap">
+  
+      </div>
+      <div>
+        <img class="img-fluid px-5 py-1 image3" src="js.svg" alt="JavaScript" title="JavaScript">
+  
+      </div>
+      
     </div>
   </section>
   <div class="fs-3 mt-5 mb-1">
@@ -162,13 +164,13 @@
   <section class="container my-4 border p-2 bg-lwhite">
     <ul class="list-group list-group-flush">
       <li class="list-group-item body">Dancing...</li>
-      <li class="list-group-item">Listening Music...</li>
-      <li class="list-group-item">Foodii...</li>
-      <li class="list-group-item">Watching movies and series...</li>
-      <li class="list-group-item">Want to learn Flute...</li>
-      <li class="list-group-item">Want to be tummy fit...</li>
-      <li class="list-group-item">Solving the real world problems...</li>
-      <li class="list-group-item">Enjoy taking challenges and work on them...</li>
+      <li class="list-group-item body">Listening Music...</li>
+      <li class="list-group-item body">Foodii...</li>
+      <li class="list-group-item body">Watching movies and series...</li>
+      <li class="list-group-item body">Want to learn Flute...</li>
+      <li class="list-group-item body">Want to be tummy fit...</li>
+      <li class="list-group-item body">Solving the real world problems...</li>
+      <li class="list-group-item body">Enjoy taking challenges and work on them...</li>
 
 
 
@@ -201,26 +203,37 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 
   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <script src="owl-carousel/owl.carousel.js"></script>
   <script>
-
-$('#recipeCarousel .carousel-item').each(function() {
-      var minPerSlide = 1;
-      var next = $(this).next();
-      if (!next.length) {
-        next = $(this).siblings(':first');
-      }
-      next.children(':first-child').clone().appendTo($(this));
-
-      for (var i = 0; i < minPerSlide; i++) {
-        next = next.next();
-        if (!next.length) {
-          next = $(this).siblings(':first');
-        }
-
-        next.children(':first-child').clone().appendTo($(this));
-      }
-    });
-</script>
+        $(document).ready(function() {
+     
+          $(".owl-carousel").owlCarousel({
+     
+     //Basic Speeds
+     slideSpeed : 1000,
+     paginationSpeed : 1000,
+  
+     //Autoplay
+     autoPlay : true,
+     goToFirst : true,
+     goToFirstSpeed : 1000,
+  
+     // Navigation
+     navigation : false,
+     pagination : false,
+  
+     // Responsive
+     responsive: true,
+     items : 4,
+     itemsDesktop : [1199,4],
+     itemsDesktopSmall : [980,3],
+     itemsTablet: [768,2],
+     itemsMobile : [479,1]
+  
+ })
+    
+   });
+  </script>
 </body>
 
 </html>
